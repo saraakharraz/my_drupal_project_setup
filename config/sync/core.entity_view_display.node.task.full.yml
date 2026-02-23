@@ -1,0 +1,145 @@
+uuid: a1460503-f378-45dc-b7cd-9c0f87c1c2ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.task.field_assigned_to
+    - field.field.node.task.field_description
+    - field.field.node.task.field_due_date
+    - field.field.node.task.field_parent_task
+    - field.field.node.task.field_project
+    - field.field.node.task.field_task_status
+    - node.type.task
+    - views.view.tasks
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 67-33
+        components:
+          a242d714-43c5-4d40-8d58-5c0ee2ca3342:
+            uuid: a242d714-43c5-4d40-8d58-5c0ee2ca3342
+            region: first
+            configuration:
+              id: 'field_block:node:task:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          3147e595-ce42-42ca-a6c4-22794f34eb14:
+            uuid: 3147e595-ce42-42ca-a6c4-22794f34eb14
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_project'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          3ae26ceb-5df2-4531-bb74-02f317e3a2cb:
+            uuid: 3ae26ceb-5df2-4531-bb74-02f317e3a2cb
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_task_status'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          93af0349-fdab-4735-8b2a-feb7debd3c50:
+            uuid: 93af0349-fdab-4735-8b2a-feb7debd3c50
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_due_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          ee3093c2-f3a6-4170-be94-635734d462f0:
+            uuid: ee3093c2-f3a6-4170-be94-635734d462f0
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_assigned_to'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          4437ee94-7cf7-4031-9cb0-4516f098e1fb:
+            uuid: 4437ee94-7cf7-4031-9cb0-4516f098e1fb
+            region: content
+            configuration:
+              id: 'views_block:tasks-tasks_by_parent_task'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.task.full
+targetEntityType: node
+bundle: task
+mode: full
+content: {  }
+hidden:
+  field_assigned_to: true
+  field_description: true
+  field_due_date: true
+  field_parent_task: true
+  field_project: true
+  field_task_status: true
+  links: true

@@ -1,0 +1,19 @@
+uuid: d1b372c4-c4d6-4fb1-b7b5-e5a662c79245
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_parent_task
+field_name: field_parent_task
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 8b3b18bc-4282-46d4-a5ce-e9a8f99ef2fc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project status'
+vid: project_status
+description: null
+weight: 0
+new_revision: false
